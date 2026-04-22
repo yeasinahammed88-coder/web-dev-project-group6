@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental Service</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="home.css">
+
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">CarRental</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Find Your Perfect Ride</h1>
+        <p>Affordable and comfortable cars for your next journey</p>
+        <button class="btn rent-btn">Book Now</button>
+    </section>
+
+    <!-- CARS -->
+    <section class="cars-section" id="cars">
+        <h2>Featured Cars</h2>
+
+        <div class="car-container">
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80">
+                <h3>Volkswagen Golf</h3>
+                <p>From £50/day</p>
+                <button class="btn rent-btn">Rent Now</button>
+                <button class="btn details-btn">Details</button>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=800&q=60">
+                <h3>Range Rover Sport</h3>
+                <p>From £75/day</p>
+                <button class="btn rent-btn">Rent Now</button>
+                <button class="btn details-btn">Details</button>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=800&q=60">
+                <h3>Mercedes Benz C-Class</h3>
+                <p>From £90/day</p>
+                <button class="btn rent-btn">Rent Now</button>
+                <button class="btn details-btn">Details</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>©️ 2026 CarRental. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Rent Now → Contact
+        document.querySelectorAll(".rent-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                window.location.href = "contact.html";
+               
+            });
+        });
+
+        // Details → Cars
+        document.querySelectorAll(".details-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                document.getElementById("cars").scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
