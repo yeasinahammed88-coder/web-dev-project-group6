@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - CarRental</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">CarRental</div>
+</nav>
+
+<section class="contact-section">
+    <div class="overlay">
+        <h2>Contact & Booking</h2>
+
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="postcode" placeholder="Post Code" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <p class="info-text">
+            Email: <strong>carrental@email.com</strong>
+        </p>
+
+        <h3>Saved Bookings</h3>
+        <div id="bookingList"></div>
+    </div>
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <p>✅ Booking Successful!</p>
+        <p>Our team will contact you and send a confirmation email.</p>
+        <button onclick="closePopup()" class="btn">OK</button>
+    </div>
+</div>
+
+<script src="contact.js"></script>
+
+</body>
+</html>
